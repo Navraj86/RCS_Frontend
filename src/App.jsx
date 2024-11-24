@@ -4,7 +4,9 @@ import Dashboard from "./pages/Dashboard";
 import Bidding from "./pages/Bidding";
 import Users from "./pages/Users";
 import Properties from "./pages/Properties";
+import AddUser from "./pages/AddUser";
 import AddProperty from "./pages/AddProperty";
+import LeaseAgreement from "./pages/LeaseAgreement";
 
 const App = () => {
   return (
@@ -15,8 +17,9 @@ const App = () => {
           <Route path="/bidding" element={<Bidding />} />
           <Route path="/users" element={<Users />} />
           <Route path="/properties" element={<Properties />} />
+          <Route path="/adduser" element={<AddUser />} />
           <Route path="/addproperty" element={<AddProperty />} />
-          <Route path="/properties" element={<Properties />} />
+          <Route path="/leaseagreement" element={<LeaseAgreement />} />
         </Route>
       </Routes>
     </Router>

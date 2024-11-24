@@ -1,11 +1,7 @@
-import React from "react";
 
 const Notifications = () => {
   return (
-    <div className="max-w-full sm:w-[380px] rounded-lg border border-gray-200 bg-white shadow mx-auto">
-      <div className="flex items-center justify-between border-b border-gray-200 p-4">
-        <h2 className="text-base sm:text-sm font-medium">Notifications</h2>
-      </div>
+    <div className="max-w-full rounded-lg border border-gray-200 bg-white shadow mx-auto">
       <div className="p-4">
         <div className="flex items-center justify-between pb-4">
           <span className="text-sm font-medium">
@@ -15,7 +11,7 @@ const Notifications = () => {
             Mark all as read
           </button>
         </div>
-        <div className="h-[300px] overflow-y-auto">
+        <div className="h-[300px] overflow-y-auto scrollbar-thin scrollbar-track-zinc-700 scrollbar-thumb-zinc-500">
           <div className="space-y-4">
             <NotificationItem
               message="@User1 has uploaded his Receipt"
