@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Grid,
@@ -7,8 +7,8 @@ import {
   Button,
   Heading,
 } from "@chakra-ui/react";
-import Form from "../components/AddProperty/Form";
-import UploadSection from "../components/AddProperty/UploadSection";
+import Form from "../components/PropertyForm";
+import UploadSection from "../components/PropertyUpload";
 import { useNavigate } from "react-router-dom";
 
 const AddProperty = () => {

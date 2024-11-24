@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   VStack,
@@ -9,7 +8,7 @@ import {
   Text,
   Image,
 } from "@chakra-ui/react";
-import uploadIcon from "../../assets/upload.png";
+import uploadIcon from "../assets/upload.png";
 
 const UploadSection = ({ uploadedFiles, setUploadedFiles, errors, setErrors }) => {
   const handleFileUpload = (e) => {
