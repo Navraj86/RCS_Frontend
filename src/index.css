@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navstyle {
+    @apply relative font-normal text-white after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1.5px] after:-bottom-1 after:left-0 after:bg-white after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-500
+}
