@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Box, Button, Tab, Tabs, TabPanel, TabPanels, TabList, TabIndicator } from "@chakra-ui/react";
 import PropertyInfoTable from "../components/Tables/PropertyInfoTable";
 import LeaseAgreementTable from "../components/Tables/LeaseAgreementTable";
@@ -11,8 +12,12 @@ const Dashboard = () => {
           <Tab>Lease Agreement</Tab>
         </TabList>
         <Box>
-          <Button colorScheme="teal" mr="2">Add User</Button>
-          <Button colorScheme="teal">Add Property</Button>
+          <Link to="/adduser">
+            <Button colorScheme="teal" mr="2">Add User</Button>
+          </Link>
+          <Link to="/addproperty">
+            <Button colorScheme="teal">Add Property</Button>
+          </Link>
         </Box>
       </Box>
       <TabIndicator mt='-1.5px' height='2px' bg='color.teal' borderRadius='1px' />

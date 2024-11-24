@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { IoNotificationsOutline , IoLogOutOutline } from "react-icons/io5";
-import { Tooltip } from '@chakra-ui/react';
+import { Tooltip, Button, useToast, Popover, PopoverTrigger, PopoverContent, PopoverHeader, PopoverBody, PopoverArrow, PopoverCloseButton } from '@chakra-ui/react';
 import Logo from '../assets/logo.png';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import Notifications from "./Notification";
 
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const toast = useToast()
   
     useEffect(() => {
       const handleScroll = () => {
@@ -38,19 +40,26 @@ const Navbar = () => {
         </div>
 
         <nav className="flex items-center">
-            <Link to="/" className="navstyle mx-4">Home</Link>
-            <Link to="/bidding" className="navstyle mx-4">Bidding</Link>
-            <Link to="/users" className="navstyle mx-4">Users</Link>
-            <Link to="/properties" className="navstyle ml-4 mr-5">Properties</Link>
-            <Tooltip hasArrow label='Notifications' bg='gray.500' color='white'>
-                <button className="group p-2 mr-3 rounded-full hover:bg-white transition-all">
-                    <IoNotificationsOutline  size={20} className="text-white group-hover:text-primary" />
-                </button>
-            </Tooltip>
+            <NavLink to="/" className={({ isActive }) => `navstyle mx-4 ${isActive ? 'after:scale-x-100' : ''}`}>Home</NavLink>
+            <NavLink to="/bidding" className={({ isActive }) => `navstyle mx-4 ${isActive ? 'after:scale-x-100' : ''}`}>Bidding</NavLink>
+            <NavLink to="/users" className={({ isActive }) => `navstyle mx-4 ${isActive ? 'after:scale-x-100' : ''}`}>Users</NavLink>
+            <NavLink to="/properties" className={({ isActive }) => `navstyle ml-4 mr-5 ${isActive ? 'after:scale-x-100' : ''}`}>Properties</NavLink>
+            <Popover >
+              <PopoverTrigger>
+                <Button mr={2}>
+                    <IoNotificationsOutline  size={20} />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent bg="white" boxShadow="dark-lg">
+                <PopoverArrow bg="white" />
+                <PopoverHeader>Notifications</PopoverHeader>
+                <PopoverBody><Notifications /></PopoverBody>
+              </PopoverContent>
+            </Popover>
             <Tooltip hasArrow label='Logout' bg='gray.500' color='white'>
-                <button className="group p-2 rounded-full hover:bg-white transition-all">
-                    <IoLogOutOutline size={20} className="text-white group-hover:text-primary transition-colors" />
-                </button>
+                <Button onClick={() => toast({title: 'Logout Done!', position: 'bottom-right', status: 'error', isClosable: true, })}>
+                    <IoLogOutOutline size={20} />
+                </Button>
             </Tooltip>
         </nav>
     </header>
