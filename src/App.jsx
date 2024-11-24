@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AppLayout from "./layout/AppLayout";
 import Dashboard from "./pages/Dashboard";
-import AddUser from "./pages/AddUser";
 import Bidding from "./pages/Bidding";
-import LeaseAgreement from "./pages/LeaseAgreement";
+import Users from "./pages/Users";
+import Properties from "./pages/Properties";
+import AddProperty from "./pages/AddProperty";
 
 const App = () => {
   return (
@@ -11,9 +12,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="bidding" element={<Bidding />} />
-          <Route path="add-user" element={<AddUser />} />
-          <Route path="lease-agreement" element={<LeaseAgreement />} />
+          <Route path="/bidding" element={<Bidding />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/properties" element={<Properties />} />
+          <Route path="/addproperty" element={<AddProperty />} />
+          <Route path="/properties" element={<Properties />} />
         </Route>
       </Routes>
     </Router>
