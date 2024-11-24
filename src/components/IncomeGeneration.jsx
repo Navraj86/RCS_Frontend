@@ -161,9 +161,7 @@ const IncomeGeneration = () => {
             </div>
 
             <div className="mt-5">
-              <button className="hover:bg-teal-700 bg-teal-600 text-white w-full py-3 rounded-md font-semibold text-lg">
-                Submit
-              </button>
+            <button type='submit' className='rounded-md w-full h-10 text-white bg-teal-600 mt-2'>Submit</button>
             </div>
           </div>
         </div>

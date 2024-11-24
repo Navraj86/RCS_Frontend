@@ -72,7 +72,7 @@ const DonationPurpose = () => {
               />
             </div>
 
-            <button type='submit' className='rounded-md w-full h-10 text-white bg-teal-600 mb-40 mt-5'>Submit</button>
+            <button type='submit' className='rounded-md w-full h-10 text-white bg-teal-600 mb-40 mt-2'>Submit</button>
             
           </form>
         </div>
