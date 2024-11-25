@@ -5,3 +5,23 @@
 .navstyle {
     @apply relative font-normal text-white after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1.5px] after:-bottom-1 after:left-0 after:bg-white after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-500
 }
+
+input[type="file"]::file-selector-button {
+    background-color: rgb(238, 238, 238);
+    color: black;
+    padding: 7px 10px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[type="file"]{
+    width: 100%;
+    height: 40px;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+}
+
+input[type="file"]:focus{
+    border-color: #0d9488;
+}
