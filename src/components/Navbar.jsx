@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { IoNotificationsOutline , IoLogOutOutline } from "react-icons/io5";
 import { Tooltip } from '@chakra-ui/react';
-import Logo from '../assets/logo.png';
+// import Logo from '../assets/logo.png';
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -29,7 +29,7 @@ const Navbar = () => {
       } sticky top-0 transform transition-transform duration-300 flex items-center justify-between bg-primary h-16 px-10 shadow-lg z-50`}>
         <div className="flex">
             <Link to="/">
-                <img src={Logo} alt="Logo" className="w-10 h-12" />
+               { /*<img src={Logo} alt="Logo" className="w-10 h-12" />*/}
             </Link>
             <div className="ml-4 cursor-default">
                 <p className="text-white font-medium">ਬਠਿੰਡਾ</p>
