@@ -8,9 +8,15 @@ import {
   Text,
   Image,
 } from "@chakra-ui/react";
-import uploadIcon from "../assets/upload.png";
 
-const UploadSection = ({ uploadedFiles, setUploadedFiles, errors, setErrors }) => {
+import uploadIcon from "../assets/cloud_upload_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg";
+
+const UploadSection = ({
+  uploadedFiles,
+  setUploadedFiles,
+  errors,
+  setErrors,
+}) => {
   const handleFileUpload = (e) => {
     const { id, files } = e.target;
 
@@ -34,7 +40,7 @@ const UploadSection = ({ uploadedFiles, setUploadedFiles, errors, setErrors }) =
   const renderUploadField = (title, id) => (
     <FormControl isInvalid={!!errors[id]} key={id} mb={8}>
       <FormLabel htmlFor={id} fontWeight="semibold">
-        {title} <span style={{ color: 'red' }}> *</span>
+        {title} <span style={{ color: "red" }}> *</span>
       </FormLabel>
       <Box
         display="flex"
@@ -75,17 +81,19 @@ const UploadSection = ({ uploadedFiles, setUploadedFiles, errors, setErrors }) =
     <Box
       borderWidth="1px"
       marginTop={4}
-      height="750px"  
+      height="750px"
       width={"100%"}
       borderRadius="md"
       p={6}
       bg="white"
       shadow="lg"
     >
-      <h2 className="text-2xl font-bold text-primary text-center mb-5">Upload Documents</h2>
-      <div className="flex flex-col gap-7"> 
-      {renderUploadField("Sale Deed", "saleDeed") }
-      {renderUploadField("Agreement Document", "agreementDocument")}
+      <h2 className="text-2xl font-bold text-primary text-center mb-5">
+        Upload Documents
+      </h2>
+      <div className="flex flex-col gap-7">
+        {renderUploadField("Sale Deed", "saleDeed")}
+        {renderUploadField("Agreement Document", "agreementDocument")}
       </div>
     </Box>
   );
