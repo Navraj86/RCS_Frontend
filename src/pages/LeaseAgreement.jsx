@@ -15,7 +15,7 @@ const LeaseAgreement = () => {
   };
 
   return (
-    <>
+    <div>
       <Heading
         className="mt-5"
         as="h1"
@@ -30,13 +30,13 @@ const LeaseAgreement = () => {
       <div className="flex justify-center ms-20 mt-5">
         <button
           onClick={() => Income()}
-          className={`rounded-md px-4 py-2 me-5 ${activeComp === "A" ? "bg-[#017E7E] text-white" : "bg-[#e5f2f2] text-[#017e7e] border border-[#017e7e]"}`}
+          className={`rounded-md px-4 py-2 me-5 ${activeComp === "A" ? "bg-[#017E7E] text-white" : " text-[#017e7e] border border-[#017e7e]"}`}
         >
           Income Generation
         </button>
         <button
           onClick={() => Donation()}
-          className={`rounded-md px-4 py-2 me-16 ${activeComp === "B" ? "bg-[#017E7E] text-white" : "bg-[#e5f2f2] text-[#017e7e] border border-[#017e7e]"}`}
+          className={`rounded-md px-4 py-2 me-16 ${activeComp === "B" ? "bg-[#017E7E] text-white" : " text-[#017e7e] border border-[#017e7e]"}`}
         >
           Donation Purposes
         </button>
@@ -45,7 +45,7 @@ const LeaseAgreement = () => {
         {activeComp === "A" && <IncomeGeneration />}
         {activeComp === "B" && <DonationPurpose />}
       </div>
-    </>
+    </div>
   );
 };
 

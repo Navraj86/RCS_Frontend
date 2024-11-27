@@ -7,6 +7,7 @@ import Properties from "./pages/Properties";
 import AddUser from "./pages/AddUser";
 import AddProperty from "./pages/AddProperty";
 import LeaseAgreement from "./pages/LeaseAgreement";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/addproperty" element={<AddProperty />} />
           <Route path="/leaseagreement" element={<LeaseAgreement />} />
         </Route>
+          <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
